@@ -1,4 +1,4 @@
-from setup_plot import setup_plot
+from CurrentVectorFields import setup_plot
 import matplotlib.pyplot as plt
 import numpy as np
 from Orbitsphere_Matrix import Orbitsphere
@@ -20,11 +20,11 @@ orb = Orbitsphere()
 orb.Orbitsphere_78_exact(M, N, r, phi)
 orb.Orbitsphere_80_exact(M, N, r, phi)
 
-ax1 = setup_plot('Orbitsphere (Fig. 1.12 pg 78)', iterate_value, azim=0, elev=90)
+ax1 = setup_plot('Orbitsphere (Fig. 1.12 pg 78)',  azim=0, elev=90)
 for indx in range(orb.len_78):
     ax1.plot(orb.X_78[indx], orb.Y_78[indx], orb.Z_78[indx], color='blue')
 
-ax2 = setup_plot('Orbitsphere (Fig. 1.16 pg 80)', iterate_value, azim=0, elev=90)
+ax2 = setup_plot('Orbitsphere (Fig. 1.16 pg 80)', azim=0, elev=90)
 for indx in range(orb.len_80):
     ax2.plot(orb.X_80[indx], orb.Y_80[indx], orb.Z_80[indx], color='blue')
 plt.show()
